@@ -60582,6 +60582,9 @@ async function getNdk(version, options) {
     else {
         core.info("Not added to path");
     }
+    core.exportVariable("NDK_HOME", installPath);
+    core.exportVariable("ANDROID_NDK_HOME", installPath);
+    core.info("Exported NDK_HOME and ANDROID_NDK_HOME: " + installPath);
     let fullVersion;
     try {
         fullVersion = await getFullVersion(installPath);
@@ -60732,7 +60735,6 @@ async function main() {
         linkToSdk,
         localCache,
     });
-    core.exportVariable("NDK_HOME", path);
     core.setOutput("ndk-path", path);
     if (fullVersion)
         core.setOutput("ndk-full-version", fullVersion);

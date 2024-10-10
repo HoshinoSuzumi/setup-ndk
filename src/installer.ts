@@ -70,6 +70,10 @@ export async function getNdk(version: string, options: Options) {
     core.info("Not added to path")
   }
 
+  core.exportVariable("NDK_HOME", installPath)
+  core.exportVariable("ANDROID_NDK_HOME", installPath)
+  core.info("Exported NDK_HOME and ANDROID_NDK_HOME: " + installPath)
+
   let fullVersion: string | undefined
   try {
     fullVersion = await getFullVersion(installPath)
