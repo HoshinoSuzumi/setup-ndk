@@ -1,5 +1,5 @@
-name: Setup Android NDK
-description: Setup an Android NDK environment by downloading and optionally caching it and adding it to the PATH
+name: Setup Android NDK modified(export NDK_HOME)
+description: Setup an Android NDK environment by downloading and optionally caching it and adding it to the PATH and auto export NDK_HOME
 author: Raphaël Thériault
 branding:
   icon: play
