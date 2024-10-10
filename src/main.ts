@@ -14,7 +14,7 @@ async function main() {
     localCache,
   })
 
-  core.exportVariable('NDK_HOME', path)
+  core.exportVariable("NDK_HOME", path)
   core.setOutput("ndk-path", path)
   if (fullVersion) core.setOutput("ndk-full-version", fullVersion)
 }
